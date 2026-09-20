@@ -1,0 +1,9 @@
+node_modules
+dist
+.sites-runtime
+.DS_Store
+.env
+.vercel
+data/*.db
+data/*.db-shm
+data/*.db-wal
