@@ -1,7 +1,9 @@
 import app from '../server/app.js'
 
+// One Vercel function handles every /api route.
+
 export default function handler(request, response) {
-  // Vercel's rewrite passes the original API suffix through this query value.
+  // Vercel exposes the captured rewrite segment as request.query.route.
   // Local Vite requests reach the Express app directly and need no rewrite.
   const original = new URL(request.url, 'http://localhost')
   const route = request.query?.route ?? original.searchParams.get('route')

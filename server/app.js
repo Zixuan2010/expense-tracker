@@ -4,6 +4,7 @@ import { initializeApp } from 'firebase-admin/app'
 import { getAuth } from 'firebase-admin/auth'
 
 const app = express()
+app.disable('x-powered-by')
 let database
 let firebaseAuth
 let initialization
